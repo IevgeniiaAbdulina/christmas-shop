@@ -1,0 +1,19 @@
+@use "../abstracts/variables" as *;
+
+// Set text & background color (buttons on hover effect)
+@mixin set-txt-background($color, $bg-color) {
+  color: $color;
+  background-color: $bg-color;
+}
+
+// Set card title color on hover effect (card title)
+@mixin set-tile-hover($color) {
+  color: $color;
+  transition: ease-in-out 0.3s;
+}
+
+// Set icon fill color
+@mixin set-icon-color {
+  filter: invert(50%) sepia(77%) saturate(2990%) hue-rotate(331deg) brightness(97%) contrast(106%);
+  transition: ease-in-out 0.3s;
+}

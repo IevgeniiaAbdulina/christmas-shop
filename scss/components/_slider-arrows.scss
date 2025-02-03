@@ -1,0 +1,42 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+%nav-arrow {
+  width: 56px;
+  height: 56px;
+  padding: 16px;
+  border-radius: 20px;
+  transition: ease-in-out 0.3s;
+}
+
+.slider__nav-arrow {
+  @extend %nav-arrow;
+  border: 1px solid $static-white;
+  background-color: $primary-color;
+
+  &.left {
+    img {
+      transform: rotate(180deg);
+    }
+  }
+
+  @media (hover: hover) {
+    &[type="button"]:not(:disabled):hover {
+      background-color: $static-white;
+      cursor: pointer;
+
+      img {
+        @include set-icon-color;
+      }
+    }
+  }
+
+  &:disabled {
+    border: 1px solid $static-white-40;
+    background-color: $primary-color;
+
+    img {
+      opacity: 0.4;
+    }
+  }
+}

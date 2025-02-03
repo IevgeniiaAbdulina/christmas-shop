@@ -1,0 +1,40 @@
+@use "../abstracts/variables" as *;
+
+.hamburger-menu__container {
+  display: none;
+}
+
+.hamburger-menu {
+  &__icon-wrapper {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+
+    &::after,
+    &::before {
+      content: "";
+      border-top: 1px solid $dark-color;
+      position: absolute;
+      width: 20px;
+      left: 10px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    &::after {
+      top: 16px;
+    }
+    &::before {
+      bottom: 16px;
+    }
+
+    &.active::after {
+      top: 50%;
+      transform: rotate(45deg);
+    }
+    &.active::before {
+      bottom: calc(50% - 1px);
+      transform: rotate(-45deg);
+    }
+  }
+}

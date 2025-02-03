@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:ital,wght@0,600;1,600&display=swap');
+
+// Layout
+$layout-desktop: 1440px;
+$layout-tablet: 768px;
+$layout-mobile: 380px;
+
+// Fonts
+$webpage__font-family: Montserrat;
+$caption__font-family: Allura;
+$font-weight__sami-bold: 600;
+$font-weight__regular: 400;
+
+// Colors
+$primary-color: #FF4646;
+$primary-color-10: #FF46461A;
+$dark-color: #181C29;
+$static-white: #FFFFFF;
+$static-white-40: #FFFFFF66;
+$static-white-20: #FFFFFF33;
+$tag-purple: #4361FF;
+$tag-pink: #FF43F7;
+$tag-green: #06A44F;
+$content-background: #ECF3F8;
+$overlay-color: #181C29CC;
+
+// Typography
+$header-1__font-size: 32px;
+$header-2__font-size: 24px;
+$header-3__font-size: 16px;
+$header-4__font-size: 12px;
+
+$paragraph__font-size: 16px;
+$action-large__font-size: 24px;
+$action-small__font-size: 12px;
+$caption__font-size: 24px;
+$slider-text__font-size: 80px;

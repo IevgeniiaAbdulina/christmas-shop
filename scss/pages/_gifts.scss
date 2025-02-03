@@ -1,0 +1,25 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+#gifts {
+  background-image: url("../img/img-compressed/bg-garland.png");
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.gifts-list {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    color: $static-white;
+  }
+
+  &__header {
+    max-width: 36ch;
+    text-align: center;
+  }
+}

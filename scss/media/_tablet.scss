@@ -1,0 +1,52 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+@media only screen and (max-width: $layout-tablet) {
+  // Layout
+  .container {
+    margin: 0 8px;
+  }
+
+  // Header Section
+  .header {
+    &__wrapper {
+      margin: 0 8px;
+    }
+  }
+
+  .hamburger-menu {
+    &__container {
+      display: block;
+    }
+  }
+
+  // Home Page
+  //
+  // Hero Section
+  #hero {
+    background-position: center top;
+    background-size: cover;
+  }
+
+  // About Section
+  .about {
+    &__content-left {
+      padding: 60px;
+      margin: 46px 0;
+    }
+  }
+
+  // CTA Section
+  #cta-section {
+    background-size: cover;
+  }
+
+  // Footer Section
+  .footer {
+    &__contacts {
+      & > * {
+        width: 100%;
+      }
+    }
+  }
+}

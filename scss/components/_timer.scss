@@ -1,0 +1,28 @@
+@use "../abstracts/variables" as *;
+
+.timer {
+  &__container {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 20px;
+    background-color: $static-white-40;
+  }
+
+  &__item {
+    width: 80px;
+    text-align: center;
+  }
+
+  .separator {
+    width: 1px;
+    height: 20px;
+    background-color: $static-white-40;
+  }
+}
+
+.separator {
+  width: 1px;
+  height: 20px;
+  background-color: $static-white-40;
+}

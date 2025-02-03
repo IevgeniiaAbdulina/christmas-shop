@@ -1,0 +1,46 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+%btn {
+  padding: 20px 32px;
+  border-radius: 20px;
+  transition: ease-in-out 0.3s;
+}
+
+.action-button {
+  @extend %btn;
+  @include set-txt-background($static-white, $dark-color);
+}
+
+@media (hover: hover) {
+  .action-button:hover {
+    @include set-txt-background($dark-color, $static-white);
+  }
+}
+
+.back-to-top-button {
+  display: none;
+  position: sticky;
+  width: 56px;
+  height: 56px;
+  left: calc(100% - 4.6rem);
+  bottom: 1rem;
+  padding: 16px;
+  border-radius: 50%;
+  border: 1px solid $primary-color;
+  background-color: $static-white;
+  background-image: url("../img/icons/arrow-up.svg");
+  background-size: inherit;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: $layout-tablet) {
+  .back-to-top-button {
+    &:active {
+      background-color: lighten($primary-color, 20%);
+    }
+  }
+}

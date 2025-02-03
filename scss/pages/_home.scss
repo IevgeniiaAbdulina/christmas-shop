@@ -1,0 +1,182 @@
+@use "../abstracts/variables" as *;
+
+/* Hero Section */
+#hero {
+  background-image: url("../img/img-compressed/bg-ball.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.hero__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin: 60px auto;
+  color: $static-white;
+
+  h1 {
+    max-width: 20ch;
+    text-align: center;
+  }
+}
+
+/* About Section */
+.about {
+  &__wrapper {
+    background-color: $static-white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__content-left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 60px;
+    color: $dark-color;
+
+    .caption {
+      color: $primary-color;
+    }
+
+    p {
+      max-width: 40ch;
+    }
+  }
+
+  &__content-right {
+    width: 50%;
+  }
+
+  &__img-wrapper {
+    overflow: hidden;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      object-fit: cover;
+      vertical-align: middle;
+    }
+  }
+}
+
+/* Slider section */
+.slider {
+  &__content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: $static-white;
+  }
+
+  &__header {
+    text-align: center;
+
+    p {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__row-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__img-wrapper {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    overflow: hidden;
+    border-radius: 20px;
+
+    img {
+      width: 100%;
+      height: auto;
+      vertical-align: middle;
+    }
+  }
+
+  &__navigation-arrows {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+  }
+}
+
+/* Best Gifts section */
+.best-gifts {
+  &__content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    color: $static-white;
+  }
+
+  &__header {
+    text-align: center;
+
+    p {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+}
+
+/* CTA section */
+#cta-section {
+  height: 668px;
+  background-image: url("../img/img-compressed/bg-forest.png");
+  background-size: 100% auto;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.cta {
+  &__content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 120px 0;
+    color: $static-white;
+
+    h2 {
+      max-width: 24ch;
+      text-align: center;
+    }
+  }
+
+  &__timer-wrapper {
+    p {
+      text-align: center;
+      margin-bottom: 8px;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+@mixin card($width, $height, $bg-color) {
+  width: $width;
+  height: $height;
+  overflow: hidden;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: $bg-color;
+}
+
+/* Best Gifts Card style */
+.card {
+  @include card(310px, auto, $content-background);
+  cursor: pointer;
+
+  &__img {
+    width: 310px;
+    height: 230px;
+    overflow: hidden;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+
+  &.work {
+    .card__img {
+      background-image: url("../img/img-compressed/gift-for-work.png");
+    }
+  }
+  &.health {
+    .card__img {
+      background-image: url("../img/img-compressed/gift-for-health.png");
+    }
+  }
+  &.harmony {
+    .card__img {
+      background-image: url("../img/img-compressed/gift-for-harmony.png");
+    }
+  }
+
+  &__header {
+    height: 112px;
+    padding: 20px;
+    overflow: hidden;
+    border-radius: 20px;
+    color: $dark-color;
+    background-color: $static-white;
+
+    & > * {
+      margin-bottom: 8px;
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      h3 {
+        @include set-tile-hover($primary-color);
+      }
+    }
+  }
+
+  &.harmony {
+    h4 {
+      color: $tag-pink;
+    }
+  }
+
+  &.health {
+    h4 {
+      color: $tag-green;
+    }
+  }
+
+  &.work {
+    h4 {
+      color: $tag-purple;
+    }
+  }
+}

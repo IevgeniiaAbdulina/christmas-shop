@@ -1,0 +1,23 @@
+@media only screen and (max-width: 1200px) {
+  // CTA Section
+  #cta-section {
+    background-size: cover;
+  }
+
+  .footer {
+    &__contacts {
+      flex-direction: column;
+
+      a {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  // Layout
+  .container {
+    margin: 0 4%;
+  }
+}

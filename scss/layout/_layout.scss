@@ -1,0 +1,23 @@
+@use "../abstracts/variables" as *;
+
+.site-container {
+  max-width: $layout-desktop;
+  margin: 0 auto;
+}
+
+.container {
+  margin: 0 82px;
+  padding: 60px 0;
+}
+
+.webpage__content {
+  display: flex;
+  flex-direction: column;
+  background-color: $primary-color;
+  background-image: url("../img/img-compressed/bg-snow.png");
+  background-size: contain;
+  background-position: center, top left;
+  background-repeat: repeat-y;
+  overflow: hidden;
+  border-radius: 20px;
+}

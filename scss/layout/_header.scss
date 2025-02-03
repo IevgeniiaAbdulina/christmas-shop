@@ -1,0 +1,28 @@
+@use "../abstracts/variables" as *;
+
+.header {
+  &__wrapper {
+    margin: 0 82px;
+    padding: 12px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo-container {
+    padding: 8px 20px;
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: $dark-color;
+    }
+  }
+}
+
+.logo-img__wrapper {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}

@@ -1,0 +1,37 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.tabs {
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    list-style-type: none;
+  }
+
+  &__item {
+    padding: 12px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+
+    &:not(.non-interactive) {
+      @media (hover: hover) {
+        &:hover {
+          background-color: $static-white-20;
+        }
+      }
+    }
+
+    &.non-interactive {
+      background-color: $static-white-20;
+      cursor: default;
+    }
+
+    &.selected {
+      background-color: $static-white-20;
+    }
+  }
+}
+
+

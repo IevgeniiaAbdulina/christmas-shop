@@ -1,0 +1,91 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.footer {
+  &__content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+}
+
+.footer {
+  &__contacts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    & > * {
+      width: calc((100% - 24px) / 3);
+    }
+
+    a {
+      color: $dark-color;
+
+      &.contact-link {
+        @media (hover: hover) {
+          &:hover {
+            @include set-tile-hover($primary-color);
+          }
+        }
+      }
+    }
+
+    &__item {
+      min-width: 340px;
+      padding: 20px;
+      border-radius: 20px;
+      background-color: $content-background;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+  }
+
+  &__attribution {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+
+    a {
+      color: $dark-color;
+    }
+
+    @media (hover: hover) {
+      & > .caption:hover {
+        a {
+          @include set-tile-hover($primary-color);
+        }
+      }
+    }
+  }
+}
+
+.item {
+  &__img-wrapper {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+
+    @media (hover: hover) {
+      &:hover {
+        img {
+          @include set-icon-color;
+        }
+      }
+    }
+  }
+}
